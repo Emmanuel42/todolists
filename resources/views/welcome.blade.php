@@ -4,95 +4,65 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>To do list</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet" type="text/css">
-
+        <link href="https://fonts.googleapis.com/css?family=Dancing+Script" rel="stylesheet"> 
+       
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
+                background: no-repeat center/100% url('img/postit.jpg');
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
             }
-
-            .full-height {
-                height: 100vh;
-            }
-
-            .flex-center {
-                align-items: center;
-                display: flex;
-                justify-content: center;
-            }
-
-            .position-ref {
-                position: relative;
-            }
-
-            .top-right {
-                position: absolute;
-                right: 10px;
-                top: 18px;
-            }
-
+ 
             .content {
                 text-align: center;
             }
-
-            .title {
-                font-size: 84px;
-            }
-
-            .links > a {
-                color: #636b6f;
-                padding: 0 25px;
-                font-size: 13px;
-                font-weight: 600;
-                letter-spacing: .1rem;
-                text-decoration: none;
-                text-transform: uppercase;
-            }
-
+            
             .m-b-md {
-                margin-bottom: 30px;
+                margin-bottom: 300px;
+                font-family : 'Dancing Script', cursive;
+                color: white;
             }
+
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
-            @if (Route::has('login'))
-                <div class="top-right links">
+
+            <div class="content">
+                <div class="m-b-md">
+
+                    <a style="font-size: 150px; text-decoration: underline overline white">To Do List</a>
+               		<br>
+                	<br>
+                	<br>
+                	<br>
+                	
+                @if (Route::has('login'))
+                
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
-                        <a href="{{ route('login') }}">Login</a>
-
+                    	<input type="checkbox" name="login" id="connexion" />
+                        <a href="{{ route('login') }}" style="color:white; font-size: 80px">Se connecter</a>
+                        <br>
+						<br>
+                        <br>
+                        <br>
                         @if (Route::has('register'))
-                            <a href="{{ route('register') }}">Register</a>
+                        	<input type="checkbox" name="register" id="enregistrement" />
+                            <a href="{{ route('register') }}" style="color:white; font-size: 80px">S'enregistrer</a>
                         @endif
                     @endauth
-                </div>
-            @endif
-
-            <div class="content">
-                <div class="title m-b-md">
-                    Laravel
-                </div>
-
-                <div class="links">
-                    <a href="https://laravel.com/docs">Documentation</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
-                </div>
+                
+           		 @endif
+				</div>
+				
             </div>
-        </div>
+        
     </body>
+    
 </html>

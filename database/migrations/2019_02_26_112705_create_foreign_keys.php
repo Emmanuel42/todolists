@@ -13,10 +13,24 @@ class CreateForeignKeys extends Migration
      */
     public function up()
     {
-        Schema::create('foreign_keys', function (Blueprint $table) {
-            $table->increments('id');
-            $table->timestamps();
+        Schema::table('join_userslists', function (Blueprint $table) {
+            $table->foreign('fk_id_lists')->references('id_lists')->on('lists');
+            $table->foreign('fk_id_users')->references('id_users')->on('users');
         });
+        
+        Schema::table('actions', function (Blueprint $table) {
+            $table->foreign('fk_id_lists')->references('id_lists')->on('lists');
+        });
+        
+        Schema::table('commentaires', function (Blueprint $table) {
+            $table->foreign('fk_id_actions')->references('id_actions')->on('actions');
+        });
+        
+        
+//             Schema::create('foreign_keys', function (Blueprint $table) {
+//                 $table->increments('id');
+//                 $table->timestamps();
+//             });
     }
 
     /**

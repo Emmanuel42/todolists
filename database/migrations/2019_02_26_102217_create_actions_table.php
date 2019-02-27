@@ -23,7 +23,7 @@ class CreateActionsTable extends Migration
             $table->string('lieu_actions');
             $table->string('descr_actions');
             $table->string('ajout_doc_actions');
-            $table->integer('fk_id_lists');
+            $table->integer('fk_id_lists')->unsigned();
         });
     }
 

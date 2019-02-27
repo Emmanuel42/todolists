@@ -15,6 +15,8 @@ class CreateJoinUserslistsTable extends Migration
     {
         Schema::create('join_userslists', function (Blueprint $table) {
             $table->increments('id_join_userslists');
+            $table->integer('fk_id_users')->unsigned();
+            $table->integer('fk_id_lists')->unsigned();
         });
     }
 

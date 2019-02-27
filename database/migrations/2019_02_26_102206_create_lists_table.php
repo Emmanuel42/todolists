@@ -16,7 +16,6 @@ class CreateListsTable extends Migration
         Schema::create('lists', function (Blueprint $table) {
             $table->increments('id_lists');
             $table->string('nom_lists');
-            $table->integer('fk_id_actions');
         });
     }
 
