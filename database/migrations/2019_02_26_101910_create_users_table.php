@@ -21,7 +21,7 @@ class CreateUsersTable extends Migration
             $table->string('mdp');
             $table->rememberToken();
             $table->timestamp('created_at');
-//             $table->timestamp('updated_at');
+            $table->timestamp('updated_at');
         });
     }
 

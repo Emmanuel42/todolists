@@ -17,7 +17,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-       'prenom', 'nom', 'email', 'mdp', 'mdp-confirm'
+       'prenom', 'nom', 'email', 'mdp'
     ];
 
     /**
@@ -26,6 +26,6 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'remember_token',
+        'mdp_confirmation', 'remember_token'
     ];
 }

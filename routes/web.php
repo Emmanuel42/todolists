@@ -13,12 +13,14 @@
 
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ListeController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::resource('liste', 'ListeController@index');

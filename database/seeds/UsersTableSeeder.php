@@ -24,20 +24,6 @@ class UsersTableSeeder extends Seeder
             'mdp' => bcrypt('secret'),
          ]);
         
-        }
-
-        
-//        User::create(
-//             [
-//                 'prenom' => 'GreatAdmin',
-//                 'nom' => 'admin',
-//                 'email' => 'admin@la.fr',
-//                 'mdp' => bcrypt('admin'),
-//                 'remember_token' => str_random(10),
-//             ]
-//             );
-            
-        
-        
+        } 
     }
 }

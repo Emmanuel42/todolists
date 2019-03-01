@@ -25,12 +25,7 @@ class CreateForeignKeys extends Migration
         Schema::table('commentaires', function (Blueprint $table) {
             $table->foreign('fk_id_actions')->references('id_actions')->on('actions');
         });
-        
-        
-//             Schema::create('foreign_keys', function (Blueprint $table) {
-//                 $table->increments('id');
-//                 $table->timestamps();
-//             });
+
     }
 
     /**

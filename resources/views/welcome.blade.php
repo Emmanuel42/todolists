@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
         <title>To do list</title>
 
         <!-- Fonts -->
@@ -27,14 +26,18 @@
                 font-family : 'Dancing Script', cursive;
                 color: white;
             }
-
         </style>
     </head>
+    
+    <header>
+    
+    
+    </header>
+    
     <body>
 
             <div class="content">
                 <div class="m-b-md">
-
                     <a style="font-size: 150px; text-decoration: underline overline white">To Do List</a>
                		<br>
                 	<br>
@@ -44,16 +47,17 @@
                 @if (Route::has('login'))
                 
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/home') }}" style="color:white; font-size: 40px">Retour</a>
+                    	
                     @else
-                    	<input type="checkbox" name="login" id="connexion" />
+                    	<input type="checkbox" name="login" id="login" />
                         <a href="{{ route('login') }}" style="color:white; font-size: 80px">Se connecter</a>
                         <br>
 						<br>
                         <br>
                         <br>
                         @if (Route::has('register'))
-                        	<input type="checkbox" name="register" id="enregistrement" />
+                        	<input type="checkbox" name="register" id="register" />
                             <a href="{{ route('register') }}" style="color:white; font-size: 80px">S'enregistrer</a>
                         @endif
                     @endauth
@@ -64,5 +68,12 @@
             </div>
         
     </body>
+    
+    <footer>
+    
+    
+    
+    
+    </footer>
     
 </html>
